@@ -1,0 +1,17 @@
+-*- org -*-
+
+* pdftk notes
+
+** First make sure that pdf form fields are filled with values.
+
+** Extract form fields from pdf.
+   pdftk prefilled.pdf generate_fdf output template.fdf
+
+** The extracted fdf file can now be used as a template
+
+** Expand data into the template.fdf file and save as new fdf
+
+** Merge the new fdf with real data values into an unfilled pdf file
+   pdftk form.pdf fill_form realdata.fdf output filled.pdf
+
+
